@@ -1,0 +1,11 @@
+:root {
+  --navbarHeight: 60px;
+  --sideBarWidth: 270px;
+}
+
+/* This global style is necessary to completely hide the iframe injected into
+ * the page by Topcoder accounts-app. */
+#tc-accounts-iframe {
+  border: none;
+  display: none;
+}

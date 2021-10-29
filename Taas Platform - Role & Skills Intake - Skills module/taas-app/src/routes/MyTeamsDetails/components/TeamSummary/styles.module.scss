@@ -1,0 +1,32 @@
+@import "styles/include";
+
+.team-summary {
+  @include rounded-card;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 24px 20px;
+}
+
+.data-items {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    margin-top: 20px;
+    margin-right: 48px;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    margin-top: 20px;
+  }
+
+  > *:not(:last-child) {
+    margin-right: 10px;
+  }
+}

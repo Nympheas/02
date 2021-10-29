@@ -1,0 +1,128 @@
+/* this style controls the sidebar,
+   but it also has to set the margin for the main content of the main frame */
+#single-spa-main {
+  margin-left: 0;
+}
+
+.main-menu-wrapper {
+  background-color: #fff;
+}
+
+.main-menu-header {
+  margin: 22px 0 20px 21px;
+}
+
+.menu-toggle-icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.main-menu-mobile {
+  background-color: #fff;
+  left: 0;
+  padding: 18px 0;
+  position: absolute;
+  width: 100%;
+}
+
+.hamburger-icon {
+  width: 19px;
+  margin-left: -2px;
+}
+
+.main-menu-mobile::before {
+  border-top: 1px solid #e7e7e7;
+  content: "";
+  left: 20px;
+  right: 20px;
+  position: absolute;
+  top: 0;
+}
+
+.main-menu {
+  width: var(--sideBarWidth);
+}
+
+.main-menu-collapsed {
+  width: auto;
+}
+
+@media (max-width: 1023px) {
+  .main-menu {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+
+  .main-menu-header {
+    align-items: center;
+    margin-top: 0;
+    border-bottom: 0;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    margin-left: 0;
+  }
+
+  .main-menu-logo {
+    height: 32px;
+    left: 20px;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 32px;
+  }
+
+  .main-menu-title {
+    margin-top: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #2a2a2a;
+  }
+
+  .main-menu-title::after {
+    background-image: url("../../assets/images/tick-down-green.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: inline-block;
+    height: 16px;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: 16px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  .main-menu-title-up::after {
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* this style controls the sidebar,
+     but it also has to set the margin for the main content of the main frame */
+  #single-spa-main {
+    margin-left: var(--sideBarWidth);
+  }
+
+  /* if sidebar is disabled, then remove margin for the main content */
+  body.no-sidebar #single-spa-main {
+    margin-left: 0;
+  }
+
+  .main-menu-wrapper {
+    left: 0;
+    height: calc(100vh - var(--navbarHeight));
+    position: absolute;
+    top: var(--navbarHeight);
+  }
+}

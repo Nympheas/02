@@ -1,0 +1,74 @@
+// this is to include tc styles in the output library
+@import '~tc-ui/src/styles/tc-includes';
+
+:global {
+  .container {
+    display: flex;
+
+    @media screen and (max-width: $screen-md - 1px) {
+      flex-direction: column;
+    }
+
+    &.no-padding {
+      .content-wrapper {
+        padding: 0;
+      }
+
+      .content-wrapper-inner {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .content-wrapper {
+    padding-bottom: 4 * $base-unit;
+    padding-left: 4 * $base-unit;
+    padding-right: 4 * $base-unit;
+    width: calc(100% - 1px);
+
+    @media screen and (min-width: $screen-md) and (max-width: 280px * 3) {
+      /* minus sidebar border width */
+      width: calc(100% * 2/3 - 1px);
+    }
+
+    @media screen and (max-width: $screen-md - 1px) {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
+  }
+
+  .content-wrapper-inner {
+    margin: 0 auto;
+    max-width: 760px;
+  }
+
+  .notifications-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1150px;
+    min-width: 960px;
+    padding: 30px 20px 0;
+
+    > .content {
+      flex: 1;
+      margin-right: 30px;
+      max-width: 720px;
+
+      > .end-of-list {
+        @include roboto-medium;
+        color: $tc-gray-50;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+        padding: 20px 0;
+      }
+    }
+
+    > .filters {
+      flex: 1;
+      max-width: 360px;
+    }
+  }
+}

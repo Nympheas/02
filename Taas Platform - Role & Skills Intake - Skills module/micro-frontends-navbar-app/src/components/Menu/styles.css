@@ -1,0 +1,107 @@
+.menu,
+.menu-submenu {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.menu > li,
+.menu-submenu > li {
+  list-style: none;
+}
+
+.menu > li + li {
+  margin-top: 12px;
+}
+
+.menu-submenu {
+  margin-top: 6px;
+}
+
+.menu-submenu > li + li {
+  margin-top: 6px;
+}
+
+.menu-link {
+  border-left: 4px solid transparent;
+  color: #333333;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  outline: none;
+  padding-left: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.menu-link > .subroute-icon {
+  margin-right: 20px;
+}
+.menu-link > .active-icon {
+  display: none;
+}
+.menu-link.menu-link-active > .active-icon {
+  display: flex;
+}
+
+.menu-link.menu-link-active > .gray-icon {
+  display: none;
+}
+.menu-link > .gray-icon {
+  display: flex;
+}
+
+.menu-link-active {
+  border-left-color: #12c188;
+  font-weight: 500;
+}
+
+.menu-submenu .menu-link {
+  font-size: 12px;
+  font-weight: normal;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 31px;
+}
+
+.menu-submenu .menu-link-active {
+  font-weight: 500;
+}
+
+.menu-link-toggle::after {
+  background-image: url("../../assets/images/tick-down-green.svg");
+  content: "";
+  display: inline-block;
+  height: 12px;
+  margin-left: 9px;
+  vertical-align: middle;
+  width: 12px;
+}
+
+.menu-link-toggle-up::after {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1023px) {
+  .menu-link {
+    font-size: 16px;
+  }
+
+  .menu-submenu {
+    margin-top: 10px;
+  }
+
+  .menu-submenu > li + li {
+    margin-top: 10px;
+  }
+
+  .menu-submenu .menu-link {
+    font-size: 14px;
+    font-weight: normal;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 31px;
+  }
+}

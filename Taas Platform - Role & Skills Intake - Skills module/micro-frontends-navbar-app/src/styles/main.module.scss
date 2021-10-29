@@ -1,0 +1,11 @@
+@import '~tc-ui/src/styles/tc-styles';
+@import '~tc-ui/src/styles/tc-includes';
+// This is the partial where we load all the Roboto fonts for Webpack
+@import 'fonts';
+
+:global {
+  .notifications-dropdown,
+  .notifications-container {
+    @include roboto;
+  }
+}

@@ -1,0 +1,9 @@
+.notifications-menu {
+    position: relative;
+    margin-right: 18px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}

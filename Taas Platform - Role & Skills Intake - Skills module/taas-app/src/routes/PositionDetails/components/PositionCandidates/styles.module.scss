@@ -1,0 +1,131 @@
+@import "styles/include";
+
+.position-candidates {
+  @include rounded-card;
+  padding: 0 24px 24px;
+}
+
+.sort-select {
+  width: 380px;
+}
+
+.no-candidates {
+  color: #aaaaaa;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  > * {
+    margin-top: 24px;
+  }
+
+  > *:first-child {
+    margin-right: 24px;
+  }
+}
+
+.table {
+  @include table;
+}
+
+.table-row {
+  @include table-row;
+}
+
+.table-cell {
+  @include table-cell;
+}
+
+.cell-user {
+  width: 30%;
+}
+
+.cell-skills {
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 30%;
+}
+
+.cell-prev-interviews {
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 15%;
+}
+
+.cell-action {
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 25%;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  > * + * {
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 5px;
+
+  > svg {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  .table-row {
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .cell-user {
+    width: 40%;
+  }
+
+  .cell-skills {
+    width: 60%;
+  }
+
+  .cell-action {
+    padding-top: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .table-row {
+    flex-direction: column;
+  }
+
+  .table-cell {
+    padding: 8px;
+  }
+
+  .cell-user,
+  .cell-skills,
+  .cell-action {
+    width: 100%;
+  }
+}
+
+@media (max-width: 374px) {
+  .sort-select {
+    width: 100%;
+  }
+}
